@@ -1,3 +1,34 @@
+// Player State
+plr_speed = 8;
+plr_health = 200;
+plr_max_health = 200;
+
+/// @param {string}  label Healthbar text
+/// @param {Asset.GMSprite}  sprite Healthbar sprite
+function render_healthbar(label, sprite, px, py, width, height) {
+	//health
+	draw_sprite_stretched(
+		sprite,
+		0,
+		px,
+		py,
+		(plr_health / plr_max_health) * width,
+		height
+	);
+	//background
+	draw_sprite_stretched(
+		spr_healthbar,
+		0,
+		px,
+		py,
+		width,
+		height
+	);
+	//text
+	draw_set_font(Font1);
+	draw_text(px, py * 0.25, label + " - " + string(plr_health));
+}
+
 function calculate_movement() {
 	var delta_x = keyboard_check(KEY_RIGHT) - keyboard_check(KEY_LEFT);
 	var delta_y = keyboard_check(KEY_DOWN) - keyboard_check(KEY_UP);
@@ -10,8 +41,8 @@ function calculate_movement() {
 	}
 
 	// Calculate new position
-	var player_x = x + delta_x * DEFAULT_SPEED;
-	var player_y = y + delta_y * DEFAULT_SPEED;
+	var player_x = x + delta_x * plr_speed;
+	var player_y = y + delta_y * plr_speed;
 	
 	// Truncate position for inside board
 	var half_w = sprite_width / 2;

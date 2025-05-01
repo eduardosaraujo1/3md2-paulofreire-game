@@ -32,7 +32,6 @@
     {"$GMObjectProperty":"v1","%Name":"KEY_LEFT","filters":[],"listItems":[],"multiselect":false,"name":"KEY_LEFT","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"vk_left","varType":4,},
     {"$GMObjectProperty":"v1","%Name":"KEY_RIGHT","filters":[],"listItems":[],"multiselect":false,"name":"KEY_RIGHT","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"vk_right","varType":4,},
     {"$GMObjectProperty":"v1","%Name":"KEY_ATTACK","filters":[],"listItems":[],"multiselect":false,"name":"KEY_ATTACK","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"vk_rshift","varType":4,},
-    {"$GMObjectProperty":"v1","%Name":"DEFAULT_SPEED","filters":[],"listItems":[],"multiselect":false,"name":"DEFAULT_SPEED","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"8","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

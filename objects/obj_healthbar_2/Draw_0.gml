@@ -1,4 +1,0 @@
-draw_set_font(Font1);
-
-draw_text(x, y-48, "Jogador 2");
-draw_self();
