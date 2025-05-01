@@ -1,4 +1,5 @@
-var movement = calculate_movement();
+var position = calculate_movement();
 
-x = movement.px;
-y = movement.py;
+
+x = position.px;
+y = position.py;

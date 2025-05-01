@@ -1,20 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_player1",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_healthbar_bg",
+  "eventList":[],
   "managed":true,
-  "name":"obj_player1",
+  "name":"obj_healthbar_bg",
   "overriddenProperties":[],
   "parent":{
-    "name":"players",
-    "path":"folders/Objects/players.yy",
+    "name":"healthbar",
+    "path":"folders/Objects/healthbar.yy",
   },
-  "parentObjectId":{
-    "name":"abs_player",
-    "path":"objects/abs_player/abs_player.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player1",
-    "path":"sprites/spr_player1/spr_player1.yy",
+    "name":"spr_healthbar",
+    "path":"sprites/spr_healthbar/spr_healthbar.yy",
   },
   "spriteMaskId":null,
   "visible":true,

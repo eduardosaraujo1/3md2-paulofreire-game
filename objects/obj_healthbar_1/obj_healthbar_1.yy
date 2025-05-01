@@ -1,19 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_player1",
+  "%Name":"obj_healthbar_1",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_player1",
+  "name":"obj_healthbar_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"players",
-    "path":"folders/Objects/players.yy",
+    "name":"healthbar",
+    "path":"folders/Objects/healthbar.yy",
   },
   "parentObjectId":{
-    "name":"abs_player",
-    "path":"objects/abs_player/abs_player.yy",
+    "name":"abs_healthbar",
+    "path":"objects/abs_healthbar/abs_healthbar.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player1",
-    "path":"sprites/spr_player1/spr_player1.yy",
+    "name":"spr_health1",
+    "path":"sprites/spr_health1/spr_health1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

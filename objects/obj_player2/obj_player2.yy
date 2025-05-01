@@ -8,8 +8,8 @@
   "name":"obj_player2",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"players",
+    "path":"folders/Objects/players.yy",
   },
   "parentObjectId":{
     "name":"abs_player",
