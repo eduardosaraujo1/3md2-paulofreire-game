@@ -25,7 +25,7 @@ function render_healthbar(label, sprite, px, py, width, height) {
 		height
 	);
 	//text
-	draw_set_font(Font1);
+	draw_set_font(fnt_default);
 	draw_text(px, py * 0.25, label + " - " + string(plr_health));
 }
 

@@ -41,7 +41,7 @@
   },
   "name":"Paulo Freire Jogo",
   "resources":[
-    {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
+    {"id":{"name":"fnt_default","path":"fonts/fnt_default/fnt_default.yy",},},
     {"id":{"name":"abs_enemy","path":"objects/abs_enemy/abs_enemy.yy",},},
     {"id":{"name":"abs_player","path":"objects/abs_player/abs_player.yy",},},
     {"id":{"name":"obj_boss","path":"objects/obj_boss/obj_boss.yy",},},
