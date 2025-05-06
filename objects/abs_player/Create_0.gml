@@ -3,6 +3,8 @@ plr_speed = 8;
 plr_health = 200;
 plr_max_health = 200;
 
+cooldown_attack = 0;
+
 /// @param {string}  label Healthbar text
 /// @param {Asset.GMSprite}  sprite Healthbar sprite
 function render_healthbar(label, sprite, px, py, width, height) {
@@ -32,6 +34,12 @@ function render_healthbar(label, sprite, px, py, width, height) {
 function calculate_movement() {
 	var delta_x = keyboard_check(KEY_RIGHT) - keyboard_check(KEY_LEFT);
 	var delta_y = keyboard_check(KEY_DOWN) - keyboard_check(KEY_UP);
+	
+	if (delta_x == -1){
+		image_xscale = 1;
+	} else if (delta_x == 1) {
+		image_xscale = -1;
+	}
 
 	// Normalize vectors
 	var magnitude = sqrt(delta_x * delta_x + delta_y * delta_y); // a^2 + b^2 = c^2
@@ -45,8 +53,8 @@ function calculate_movement() {
 	var player_y = y + delta_y * plr_speed;
 	
 	// Truncate position for inside board
-	var half_w = sprite_width / 2;
-	var half_h = sprite_height / 2;
+	var half_w = abs(sprite_width) / 2;
+	var half_h = abs(sprite_height) / 2;
 	player_x = max(min(player_x, room_width - half_w), half_w);
 	player_y = max(min(player_y, room_height - half_h), half_h);
 	

@@ -1,18 +1,24 @@
-var target = instance_nearest(x, y, abs_player);
+// === STEP 1: Target nearest player
+var player = instance_nearest(x, y, abs_player);
+if (player == noone) exit;
 
-if (target != noone) {
-    var dir = point_direction(x, y, target.x, target.y);
-    var spd = 4;
-    x += lengthdir_x(spd, dir);
-    y += lengthdir_y(spd, dir);
-	
-	var distance = point_distance(x, y, target.x, target.y)
-	
-	if (distance < 3) {
-		target.plr_health = max(0, target.plr_health - DAMAGE);
-	};
+var move_speed = 1.5;
+var move_dir = point_direction(x, y, player.x, player.y);
+
+// Initial movement vector toward the player
+var vx = lengthdir_x(move_speed * random_range(1, 5), move_dir);
+var vy = lengthdir_y(move_speed, move_dir);
+
+// Combine attraction to player and repulsion from others
+x += vx;
+y += vy;
+
+// === STEP 3: Attack if close
+if (point_distance(x, y, player.x, player.y) <= attack_range) {
+    player.plr_health = max(0, player.plr_health - DAMAGE);
 }
 
+// === STEP 4: Die if health is 0
 if (ENEMY_HEALTH <= 0) {
-	instance_destroy(self);
+    instance_destroy();
 }

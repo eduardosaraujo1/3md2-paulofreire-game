@@ -7,7 +7,9 @@
   ],
   "managed":true,
   "name":"obj_player2",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"abs_player","path":"objects/abs_player/abs_player.yy",},"propertyId":{"name":"KEY_ATTACK","path":"objects/abs_player/abs_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"vk_enter",},
+  ],
   "parent":{
     "name":"players",
     "path":"folders/Objects/players.yy",
