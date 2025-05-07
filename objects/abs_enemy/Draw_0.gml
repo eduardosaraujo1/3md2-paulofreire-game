@@ -1,18 +1,24 @@
-// HEALTHBAR
-var healthbar_x = x - sprite_width/2
-var healthbar_y = y - sprite_height - 32
+// === HEALTHBAR
+var width = 200;
+var height = 16;
+var _health = HEALTH;
+var hx = x - width / 2; // Centers the helathbar
+var hy = y - sprite_height / 2 - (height * 1.5);
+var color = #E9006D;
+
 draw_healthbar(
-	healthbar_x,
-	healthbar_y,
-	healthbar_x + sprite_width,
-	healthbar_y + 16,
-	ENEMY_HEALTH,
-	c_black,
-	#E9006D,
-	#E9006D,
+	hx,
+	hy,
+	hx + width,
+	hy + height,
+	_health,
+	c_gray,
+	color,
+	color,
 	0,
-	false,
-	false
+	true,
+	true
 );
 
+// === DEFAULT
 draw_self();

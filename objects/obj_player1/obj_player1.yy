@@ -2,12 +2,17 @@
   "$GMObject":"",
   "%Name":"obj_player1",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_player1",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"abs_player","path":"objects/abs_player/abs_player.yy",},"propertyId":{"name":"KEY_ATTACK","path":"objects/abs_player/abs_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"vk_space",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"abs_player","path":"objects/abs_player/abs_player.yy",},"propertyId":{"name":"KEY_RIGHT","path":"objects/abs_player/abs_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"ord(\"D\")",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"abs_player","path":"objects/abs_player/abs_player.yy",},"propertyId":{"name":"KEY_LEFT","path":"objects/abs_player/abs_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"ord(\"A\")",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"abs_player","path":"objects/abs_player/abs_player.yy",},"propertyId":{"name":"KEY_DOWN","path":"objects/abs_player/abs_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"ord(\"S\")",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"abs_player","path":"objects/abs_player/abs_player.yy",},"propertyId":{"name":"KEY_UP","path":"objects/abs_player/abs_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"ord(\"W\")",},
+  ],
   "parent":{
     "name":"players",
     "path":"folders/Objects/players.yy",

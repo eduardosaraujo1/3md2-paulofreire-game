@@ -1,16 +1,56 @@
-var position = calculate_movement();
+// === Handle Attack
+// Constants
+var attack_distance = sprite_width; // or sprite_width if you prefer sticking to that
+var cooldown_time = game_get_speed(gamespeed_fps) * 0.2; // clearer than 60 * 0.2
 
-if (keyboard_check(KEY_ATTACK) && cooldown_attack <= 0) {
-	instance_create_layer(
-		x + sprite_width * -1,
-		y,
-		layer,
-		obj_attack
-	);
-	cooldown_attack = 60 * 0.2
+// Attack trigger
+if (keyboard_check(KEY_ATTACK) && ATK_COOLDOWN <= 0) {
+    var dir_rad = degtorad(direction);
+    var ax = x + lengthdir_x(attack_distance, direction);
+    var ay = y + lengthdir_y(attack_distance, direction);
+    
+    instance_create_layer(ax, ay, layer, obj_attack);
+    
+    ATK_COOLDOWN = cooldown_time;
 }
 
-x = position.px;
-y = position.py;
+// Cooldown timer
+ATK_COOLDOWN = max(0, ATK_COOLDOWN - 1);
 
-cooldown_attack = max(0, cooldown_attack - 1);
+// === Handle movement
+var delta_x = keyboard_check(KEY_RIGHT) - keyboard_check(KEY_LEFT);
+var delta_y = keyboard_check(KEY_DOWN) - keyboard_check(KEY_UP);
+
+// Normalize vector
+var distance = sqrt(sqr(delta_x) + sqr(delta_y));
+if (distance != 0) {
+	delta_x = delta_x / distance;
+	delta_y = delta_y / distance;
+}
+
+delta_x *= SPEED;
+delta_y *= SPEED;
+
+// Ensure player is inside board
+var half_w = abs(sprite_width) / 2;
+var half_h = abs(sprite_height) / 2;
+
+if (x + delta_x < half_w || x + delta_x > room_width - half_w) {
+	delta_x = 0;
+}
+if (y + delta_y < half_h || y + delta_y > room_height - half_h) {
+	delta_y = 0;
+}
+
+move_and_collide(delta_x, delta_y, [abs_enemy])
+
+// === Handle Orientation
+if (keyboard_check_pressed(KEY_RIGHT)) {
+	direction = 0;
+} else if (keyboard_check_pressed(KEY_UP)) {
+	direction = 90;
+} else if (keyboard_check_pressed(KEY_LEFT)) {
+	direction = 180;
+} else if (keyboard_check_pressed(KEY_DOWN)) {
+	direction = 270;
+}
