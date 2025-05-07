@@ -9,4 +9,7 @@ if (ENEMY_COUNT <= 0 && !GAMEOVER) {
 // === Game Over Handler
 if (instance_number(abs_player) <= 0) {
 	GAMEOVER = true;
+	with (abs_enemy) {
+		image_alpha = 0.3;
+	}
 }

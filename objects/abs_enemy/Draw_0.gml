@@ -1,3 +1,11 @@
+// === DEFAULT
+draw_self();
+
+if (instance_number(abs_player) <= 0) {
+	// Game over
+	exit;
+}
+
 // === HEALTHBAR
 var width = 200;
 var height = 16;
@@ -26,6 +34,3 @@ var text_x = hx + width + 10; // 10 pixel padding
 var text_y = hy + (height/2) - string_height(health_text)/2; // string_height for vertical centering
 draw_set_font(fnt_default);
 draw_text(text_x, text_y, health_text);
-
-// === DEFAULT
-draw_self();
