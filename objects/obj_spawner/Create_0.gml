@@ -1,4 +1,5 @@
 // === STATE
+START = false;
 STAGE = 0;
 ENEMY_COUNT = 0;
 GAMEOVER = false;
@@ -6,6 +7,9 @@ GAMEOVER = false;
 // === POSITIONING
 x = room_width / 2;
 y = 4;
+
+// === DELAYED START
+alarm[0] = game_get_speed(gamespeed_fps) * 5;
 
 // === FUNCTIONS
 /// @function get_enemy_count(stage)

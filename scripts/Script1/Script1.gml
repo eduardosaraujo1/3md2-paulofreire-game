@@ -64,7 +64,7 @@ function apply_push(direction, distance) {
 /// @param {Asset.GMObject} obstacle_object Object or parent object to unstuck from
 /// @param {Real} attempts Maximum number of unstucking attempts
 /// @param {Real} push_distance Distance to push in each attempt
-/// @returns {Boolean} Whether unstucking was successful
+/// @returns {Bool} Whether unstucking was successful
 function unstuck(obstacle_object, attempts = 5, push_distance = 2) {
     // Skip if not colliding with anything
     if (!place_meeting(x, y, obstacle_object)) {
@@ -123,8 +123,8 @@ function unstuck(obstacle_object, attempts = 5, push_distance = 2) {
 /// @param {Asset.GMObject} obstacle_object Object to unstuck from
 /// @param {Real} attempts Maximum number of attempts
 /// @param {Real} push_distance Distance to push in each attempt
-/// @param {Boolean} respect_bounds Whether to respect room boundaries
-/// @returns {Boolean} Whether unstucking was successful
+/// @param {Bool} respect_bounds Whether to respect room boundaries
+/// @returns {Bool} Whether unstucking was successful
 function unstuck_advanced(obstacle_object, attempts = 5, push_distance = 2, respect_bounds = true) {
     // Basic unstuck implementation 
     var result = unstuck(obstacle_object, attempts, push_distance);

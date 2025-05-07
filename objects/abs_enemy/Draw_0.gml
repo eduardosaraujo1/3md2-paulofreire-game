@@ -9,7 +9,7 @@ if (instance_number(abs_player) <= 0) {
 // === HEALTHBAR
 var width = 200;
 var height = 16;
-var _health = HEALTH;
+var _health = round(HEALTH / MAX_HEALTH * 100);
 var hx = x - width / 2; // Centers the helathbar
 var hy = y - sprite_height / 2 - (height * 1.5);
 var color = #E9006D;
@@ -29,7 +29,7 @@ draw_healthbar(
 );
 
 // === HEALTH TEXT
-var health_text = string(_health);
+var health_text = string(HEALTH);
 var text_x = hx + width + 10; // 10 pixel padding
 var text_y = hy + (height/2) - string_height(health_text)/2; // string_height for vertical centering
 draw_set_font(fnt_default);
