@@ -1,6 +1,7 @@
 // === STATE
 STAGE = 0;
 ENEMY_COUNT = 0;
+GAMEOVER = false;
 
 // === POSITIONING
 x = room_width / 2;
@@ -23,7 +24,6 @@ function next_stage() {
     
     // Calculate spawn positions outside the viewport
     for (var i = 0; i < 10; i++) {
-	show_debug_message(random_get_seed());
 		var spawn_x = 0
 		var spawn_y = 0;
         var spawn_side = irandom(3); // 0: left, 1: right, 2: top, 3: bottom

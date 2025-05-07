@@ -6,14 +6,14 @@ y = clamp(half_h, y, room_height - half_h);
 
 if (HEALTH <= 0) {
 	if (COLOR_INDEX <= 0) {
-		sprite_index = spr_player1_dead;
+		layer_sprite_create("Assets", x, y, spr_player1_dead);
 	} else {
-		sprite_index = spr_player2_dead;
+		layer_sprite_create("Assets", x, y, spr_player2_dead);
 	}
-	exit;
+	instance_destroy(self);
 }
 
-// == Cooldown Tick
+// === Cooldown Tick
 atk_cooldown = max(0, atk_cooldown - 1);
 dash_cooldown = max(0, dash_cooldown - 1);
 

@@ -3,7 +3,6 @@ if (HEALTH <= 0 && !dying) {
 	kill_self();
 }
 
-	show_debug_message(instance_number(abs_enemy));
 if (dying) {
 	if (image_index > image_number - 1) {
 		instance_destroy();
@@ -13,6 +12,9 @@ if (dying) {
 
 // === Moving Towards Player
 var target = instance_nearest(x, y, abs_player);
+if (target == noone) {
+	exit;
+}
 
 // Calculate direction vector toward the player
 var dx = target.x - x;
