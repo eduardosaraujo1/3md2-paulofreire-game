@@ -1,11 +1,10 @@
 // === Handle Attack
 // Constants
-var attack_distance = sprite_width; // or sprite_width if you prefer sticking to that
-var cooldown_time = game_get_speed(gamespeed_fps) * 0.2; // clearer than 60 * 0.2
+var attack_distance = sprite_width;
+var cooldown_time = game_get_speed(gamespeed_fps) * 0.2;
 
 // Attack trigger
-if (keyboard_check(KEY_ATTACK) && ATK_COOLDOWN <= 0) {
-    var dir_rad = degtorad(direction);
+if (keyboard_check_pressed(KEY_ATTACK) && ATK_COOLDOWN <= 0) {
     var ax = x + lengthdir_x(attack_distance, direction);
     var ay = y + lengthdir_y(attack_distance, direction);
     
@@ -29,7 +28,9 @@ if (distance != 0) {
 }
 
 // Define player direction
-direction = point_direction(0, 0, delta_x, delta_y);
+if (delta_x != 0 || delta_y != 0) {
+	direction = point_direction(0, 0, delta_x, delta_y);
+}
 
 // Define player speed
 delta_x *= SPEED;

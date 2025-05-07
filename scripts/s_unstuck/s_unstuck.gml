@@ -140,7 +140,3 @@ function unstuck_advanced(obstacle_object, attempts = 5, push_distance = 2, resp
     
     return result;
 }
-
-function s_unstuck(){
-
-}
