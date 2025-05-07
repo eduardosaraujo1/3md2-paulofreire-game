@@ -24,3 +24,4 @@ function damage_player(instance, dmg) {
 		}
     }
 }
+

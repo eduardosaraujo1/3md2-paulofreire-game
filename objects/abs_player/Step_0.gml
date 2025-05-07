@@ -47,3 +47,4 @@ if (y + delta_y < half_h || y + delta_y > room_height - half_h) {
 }
 
 move_and_collide(delta_x, delta_y, [abs_enemy])
+unstuck(abs_enemy);
