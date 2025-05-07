@@ -54,6 +54,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_attack","path":"sprites/spr_attack/spr_attack.yy",},},
     {"id":{"name":"spr_boss","path":"sprites/spr_boss/spr_boss.yy",},},
+    {"id":{"name":"spr_death","path":"sprites/spr_death/spr_death.yy",},},
     {"id":{"name":"spr_enemy1","path":"sprites/spr_enemy1/spr_enemy1.yy",},},
     {"id":{"name":"spr_enemy2","path":"sprites/spr_enemy2/spr_enemy2.yy",},},
     {"id":{"name":"spr_player1","path":"sprites/spr_player1/spr_player1.yy",},},
