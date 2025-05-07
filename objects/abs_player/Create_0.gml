@@ -2,13 +2,19 @@
 ATK_COOLDOWN = game_get_speed(gamespeed_fps) * 0.25;
 ATK_SPEED = 4;
 ATK_DAMAGE = 20;
+DASH_DISTANCE = 90;
+DASH_COOLDOWN = game_get_speed(gamespeed_fps) * 0.5;
 DAMAGE = 20;
 SPEED = 8;
 MAX_HEALTH = 200;
 HEALTH = 200;
 
 // === STATE
-cooldown = 0;
+atk_cooldown = 0;
+dash_cooldown = 0;
+
+// === CREATE
+image_speed = 0;
 
 // === HELPER FUNCTIONS
 /// @parameter {Real} ax

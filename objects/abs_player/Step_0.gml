@@ -1,16 +1,30 @@
-// === Handle Attack
+// == Cooldown Tick
+atk_cooldown = max(0, atk_cooldown - 1);
+dash_cooldown = max(0, dash_cooldown - 1);
 
-// Attack trigger
-if (keyboard_check_pressed(KEY_ATTACK) && cooldown <= 0) {
+// === Handle Attack
+if (keyboard_check_pressed(KEY_ATTACK) && atk_cooldown <= 0) {
     var ax = x + lengthdir_x(sprite_width + 8, direction);
     var ay = y + lengthdir_y(sprite_width + 8, direction);
     create_attack(ax, ay, direction, ATTACK_COLOR_INDEX);
     
-    cooldown = ATK_COOLDOWN;
+    atk_cooldown = ATK_COOLDOWN;
 }
 
-// Cooldown timer
-cooldown = max(0, cooldown - 1);
+
+// === Handle Dashing
+if (keyboard_check_pressed(KEY_DASH) && dash_cooldown <= 0) {
+	alarm[0] = 5;
+	image_speed = 1;
+	
+	dash_cooldown = DASH_COOLDOWN;
+}
+
+if (image_index > image_number - 1) {
+	image_speed = 0;
+	image_index = 0;
+}
+
 
 // === Handle movement
 var delta_x = keyboard_check(KEY_RIGHT) - keyboard_check(KEY_LEFT);
@@ -32,16 +46,11 @@ if (delta_x != 0 || delta_y != 0) {
 delta_x *= SPEED;
 delta_y *= SPEED;
 
+move_and_collide(delta_x, delta_y, [abs_enemy])
+unstuck(abs_enemy);
+
 // Ensure player is inside board
 var half_w = abs(sprite_width) / 2;
 var half_h = abs(sprite_height) / 2;
-
-if (x + delta_x < half_w || x + delta_x > room_width - half_w) {
-	delta_x = 0;
-}
-if (y + delta_y < half_h || y + delta_y > room_height - half_h) {
-	delta_y = 0;
-}
-
-move_and_collide(delta_x, delta_y, [abs_enemy])
-unstuck(abs_enemy);
+x = clamp(half_w, x, room_width - half_w);
+y = clamp(half_h, y, room_height - half_h);

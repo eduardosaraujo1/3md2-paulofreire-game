@@ -4,6 +4,7 @@
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"abs_player",
@@ -32,6 +33,7 @@
     {"$GMObjectProperty":"v1","%Name":"KEY_LEFT","filters":[],"listItems":[],"multiselect":false,"name":"KEY_LEFT","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"vk_left","varType":4,},
     {"$GMObjectProperty":"v1","%Name":"KEY_RIGHT","filters":[],"listItems":[],"multiselect":false,"name":"KEY_RIGHT","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"vk_right","varType":4,},
     {"$GMObjectProperty":"v1","%Name":"KEY_ATTACK","filters":[],"listItems":[],"multiselect":false,"name":"KEY_ATTACK","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"vk_enter","varType":4,},
+    {"$GMObjectProperty":"v1","%Name":"KEY_DASH","filters":[],"listItems":[],"multiselect":false,"name":"KEY_DASH","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"vk_rshift","varType":4,},
     {"$GMObjectProperty":"v1","%Name":"ATTACK_COLOR_INDEX","filters":[],"listItems":[],"multiselect":false,"name":"ATTACK_COLOR_INDEX","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",

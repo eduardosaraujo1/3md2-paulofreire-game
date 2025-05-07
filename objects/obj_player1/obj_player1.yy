@@ -12,6 +12,7 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"abs_player","path":"objects/abs_player/abs_player.yy",},"propertyId":{"name":"KEY_LEFT","path":"objects/abs_player/abs_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"ord(\"A\")",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"abs_player","path":"objects/abs_player/abs_player.yy",},"propertyId":{"name":"KEY_DOWN","path":"objects/abs_player/abs_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"ord(\"S\")",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"abs_player","path":"objects/abs_player/abs_player.yy",},"propertyId":{"name":"KEY_UP","path":"objects/abs_player/abs_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"ord(\"W\")",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"abs_player","path":"objects/abs_player/abs_player.yy",},"propertyId":{"name":"KEY_DASH","path":"objects/abs_player/abs_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"vk_shift",},
   ],
   "parent":{
     "name":"players",
