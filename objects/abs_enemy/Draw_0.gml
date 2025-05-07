@@ -21,10 +21,10 @@ draw_healthbar(
 );
 
 // === HEALTH TEXT
-draw_set_font(fnt_default);
 var health_text = string(_health);
-var text_x = hx + width + 10; // Position 10 pixels to the right of the healthbar
-var text_y = hy + (height/2) - string_height(health_text)/2; // Vertically center with the healthbar
+var text_x = hx + width + 10; // 10 pixel padding
+var text_y = hy + (height/2) - string_height(health_text)/2; // string_height for vertical centering
+draw_set_font(fnt_default);
 draw_text(text_x, text_y, health_text);
 
 // === DEFAULT

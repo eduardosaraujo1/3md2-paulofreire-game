@@ -35,7 +35,6 @@ direction = point_direction(0, 0, delta_x, delta_y);
 delta_x *= SPEED;
 delta_y *= SPEED;
 
-
 // Ensure player is inside board
 var half_w = abs(sprite_width) / 2;
 var half_h = abs(sprite_height) / 2;

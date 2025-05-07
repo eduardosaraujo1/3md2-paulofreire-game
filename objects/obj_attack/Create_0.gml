@@ -1,2 +1,5 @@
+// === CONFIGURATION
 DAMAGE = 20;
-alarm[0] = game_get_speed(gamespeed_fps) * 2;
+
+// === Create logic
+image_speed = 0;
