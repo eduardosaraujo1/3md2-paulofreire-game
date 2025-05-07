@@ -59,7 +59,7 @@ function next_stage() {
 		var spawn_x = 0
 		var spawn_y = 0;
         var spawn_side = irandom(3); // 0: left, 1: right, 2: top, 3: bottom
-		var spawn_sprite = irandom(3); // 0-2 is enemy1, 3 is enemy2
+		var spawn_sprite = irandom(9); // 0 is boss, 1-3 is enemy2, 4-10 is enemy1
         
         switch (spawn_side) {
             case 0: // Left side
@@ -82,12 +82,20 @@ function next_stage() {
         
 		switch (spawn_sprite) {
 			case 0:
+				instance_create_layer(spawn_x, spawn_y, layer, obj_boss);
+				break;
 			case 1:
 			case 2:
-				instance_create_layer(spawn_x, spawn_y, layer, obj_enemy1);
-				break;
 			case 3:
 				instance_create_layer(spawn_x, spawn_y, layer, obj_enemy2);
+				break;
+			case 4:
+			case 5:
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+				instance_create_layer(spawn_x, spawn_y, layer, obj_enemy1);
 				break;
 		}
     }
