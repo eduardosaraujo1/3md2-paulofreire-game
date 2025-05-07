@@ -1,3 +1,18 @@
+// Ensure player is inside board
+var half_w = abs(sprite_width) / 2;
+var half_h = abs(sprite_height) / 2;
+x = clamp(half_w, x, room_width - half_w);
+y = clamp(half_h, y, room_height - half_h);
+
+if (HEALTH <= 0) {
+	if (COLOR_INDEX <= 0) {
+		sprite_index = spr_player1_dead;
+	} else {
+		sprite_index = spr_player2_dead;
+	}
+	exit;
+}
+
 // == Cooldown Tick
 atk_cooldown = max(0, atk_cooldown - 1);
 dash_cooldown = max(0, dash_cooldown - 1);
@@ -6,7 +21,7 @@ dash_cooldown = max(0, dash_cooldown - 1);
 if (keyboard_check_pressed(KEY_ATTACK) && atk_cooldown <= 0) {
     var ax = x + lengthdir_x(sprite_width + 8, direction);
     var ay = y + lengthdir_y(sprite_width + 8, direction);
-    create_attack(ax, ay, direction, ATTACK_COLOR_INDEX);
+    create_attack(ax, ay, direction, COLOR_INDEX);
     
     atk_cooldown = ATK_COOLDOWN;
 }
@@ -48,9 +63,3 @@ delta_y *= SPEED;
 
 move_and_collide(delta_x, delta_y, [abs_enemy])
 unstuck(abs_enemy);
-
-// Ensure player is inside board
-var half_w = abs(sprite_width) / 2;
-var half_h = abs(sprite_height) / 2;
-x = clamp(half_w, x, room_width - half_w);
-y = clamp(half_h, y, room_height - half_h);

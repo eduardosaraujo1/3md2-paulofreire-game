@@ -7,7 +7,7 @@
   "managed":true,
   "name":"obj_player2",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"abs_player","path":"objects/abs_player/abs_player.yy",},"propertyId":{"name":"ATTACK_COLOR_INDEX","path":"objects/abs_player/abs_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"abs_player","path":"objects/abs_player/abs_player.yy",},"propertyId":{"name":"COLOR_INDEX","path":"objects/abs_player/abs_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
   ],
   "parent":{
     "name":"players",

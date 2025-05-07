@@ -34,7 +34,7 @@
     {"$GMObjectProperty":"v1","%Name":"KEY_RIGHT","filters":[],"listItems":[],"multiselect":false,"name":"KEY_RIGHT","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"vk_right","varType":4,},
     {"$GMObjectProperty":"v1","%Name":"KEY_ATTACK","filters":[],"listItems":[],"multiselect":false,"name":"KEY_ATTACK","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"vk_enter","varType":4,},
     {"$GMObjectProperty":"v1","%Name":"KEY_DASH","filters":[],"listItems":[],"multiselect":false,"name":"KEY_DASH","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"vk_rshift","varType":4,},
-    {"$GMObjectProperty":"v1","%Name":"ATTACK_COLOR_INDEX","filters":[],"listItems":[],"multiselect":false,"name":"ATTACK_COLOR_INDEX","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"COLOR_INDEX","filters":[],"listItems":[],"multiselect":false,"name":"COLOR_INDEX","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
