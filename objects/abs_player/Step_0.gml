@@ -28,8 +28,13 @@ if (distance != 0) {
 	delta_y = delta_y / distance;
 }
 
+// Define player direction
+direction = point_direction(0, 0, delta_x, delta_y);
+
+// Define player speed
 delta_x *= SPEED;
 delta_y *= SPEED;
+
 
 // Ensure player is inside board
 var half_w = abs(sprite_width) / 2;
@@ -43,14 +48,3 @@ if (y + delta_y < half_h || y + delta_y > room_height - half_h) {
 }
 
 move_and_collide(delta_x, delta_y, [abs_enemy])
-
-// === Handle Orientation
-if (keyboard_check_pressed(KEY_RIGHT)) {
-	direction = 0;
-} else if (keyboard_check_pressed(KEY_UP)) {
-	direction = 90;
-} else if (keyboard_check_pressed(KEY_LEFT)) {
-	direction = 180;
-} else if (keyboard_check_pressed(KEY_DOWN)) {
-	direction = 270;
-}
