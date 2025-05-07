@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_button_jogar",
+  "%Name":"obj_button_jogar_single",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_button_jogar",
+  "name":"obj_button_jogar_single",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"abs_button","path":"objects/abs_button/abs_button.yy",},"propertyId":{"name":"text","path":"objects/abs_button/abs_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Multiplayer",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"abs_button","path":"objects/abs_button/abs_button.yy",},"propertyId":{"name":"text","path":"objects/abs_button/abs_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Singleplayer",},
   ],
   "parent":{
     "name":"main_menu",

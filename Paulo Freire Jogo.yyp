@@ -51,6 +51,7 @@
     {"id":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},},
     {"id":{"name":"obj_boss","path":"objects/obj_boss/obj_boss.yy",},},
     {"id":{"name":"obj_button_controles","path":"objects/obj_button_controles/obj_button_controles.yy",},},
+    {"id":{"name":"obj_button_jogar_single","path":"objects/obj_button_jogar_single/obj_button_jogar_single.yy",},},
     {"id":{"name":"obj_button_jogar","path":"objects/obj_button_jogar/obj_button_jogar.yy",},},
     {"id":{"name":"obj_button_retry","path":"objects/obj_button_retry/obj_button_retry.yy",},},
     {"id":{"name":"obj_button_sair","path":"objects/obj_button_sair/obj_button_sair.yy",},},
