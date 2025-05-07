@@ -1,20 +1,16 @@
 // === Handle Attack
-// Constants
-var attack_distance = sprite_width;
-var cooldown_time = game_get_speed(gamespeed_fps) * 0.2;
 
 // Attack trigger
-if (keyboard_check_pressed(KEY_ATTACK) && ATK_COOLDOWN <= 0) {
-    var ax = x + lengthdir_x(attack_distance, direction);
-    var ay = y + lengthdir_y(attack_distance, direction);
+if (keyboard_check_pressed(KEY_ATTACK) && cooldown <= 0) {
+    var ax = x + lengthdir_x(sprite_width + 8, direction);
+    var ay = y + lengthdir_y(sprite_width + 8, direction);
+    create_attack(ax, ay, direction, ATTACK_COLOR_INDEX);
     
-    instance_create_layer(ax, ay, layer, obj_attack);
-    
-    ATK_COOLDOWN = cooldown_time;
+    cooldown = ATK_COOLDOWN;
 }
 
 // Cooldown timer
-ATK_COOLDOWN = max(0, ATK_COOLDOWN - 1);
+cooldown = max(0, cooldown - 1);
 
 // === Handle movement
 var delta_x = keyboard_check(KEY_RIGHT) - keyboard_check(KEY_LEFT);
