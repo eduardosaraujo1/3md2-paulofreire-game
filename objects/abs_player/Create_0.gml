@@ -2,7 +2,7 @@
 ATK_COOLDOWN = game_get_speed(gamespeed_fps) * 0.25;
 ATK_SPEED = 4;
 ATK_DAMAGE = 20;
-DASH_DISTANCE = 90;
+DASH_DISTANCE = 200;
 DASH_COOLDOWN = game_get_speed(gamespeed_fps) * 0.5;
 DAMAGE = 20;
 SPEED = 8;

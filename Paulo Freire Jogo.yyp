@@ -52,6 +52,7 @@
     {"id":{"name":"obj_boss","path":"objects/obj_boss/obj_boss.yy",},},
     {"id":{"name":"obj_button_controles","path":"objects/obj_button_controles/obj_button_controles.yy",},},
     {"id":{"name":"obj_button_jogar","path":"objects/obj_button_jogar/obj_button_jogar.yy",},},
+    {"id":{"name":"obj_button_retry","path":"objects/obj_button_retry/obj_button_retry.yy",},},
     {"id":{"name":"obj_button_sair","path":"objects/obj_button_sair/obj_button_sair.yy",},},
     {"id":{"name":"obj_enemy1","path":"objects/obj_enemy1/obj_enemy1.yy",},},
     {"id":{"name":"obj_enemy2","path":"objects/obj_enemy2/obj_enemy2.yy",},},
@@ -62,6 +63,7 @@
     {"id":{"name":"obj_text_left","path":"objects/obj_text_left/obj_text_left.yy",},},
     {"id":{"name":"obj_text","path":"objects/obj_text/obj_text.yy",},},
     {"id":{"name":"rm_controls","path":"rooms/rm_controls/rm_controls.yy",},},
+    {"id":{"name":"rm_game_single","path":"rooms/rm_game_single/rm_game_single.yy",},},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},},
@@ -84,6 +86,7 @@
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
     {"roomId":{"name":"rm_controls","path":"rooms/rm_controls/rm_controls.yy",},},
+    {"roomId":{"name":"rm_game_single","path":"rooms/rm_game_single/rm_game_single.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

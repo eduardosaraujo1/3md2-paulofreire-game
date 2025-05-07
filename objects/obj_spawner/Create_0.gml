@@ -12,13 +12,46 @@ y = 4;
 alarm[0] = game_get_speed(gamespeed_fps) * 5;
 
 // === FUNCTIONS
+function game_over() {
+	GAMEOVER = true;
+	with (abs_enemy) {
+		image_alpha = 0.3;
+		depth = 100;
+	}
+	
+	// Manage state
+	var text_y = 224;
+	var retry_y = 320;
+	var quit_y = 416;
+	var center = camera_get_view_width(view_camera[0]) / 2
+	
+	// Draw text
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_middle);
+	draw_text(center, text_y, "Você sobreviveu por " + string(STAGE) + " níveis.");
+	
+	// Draw retry button
+	var retry = instance_create_layer(center, retry_y, layer, obj_button_retry);
+	
+	// Draw quit button
+	var quit = instance_create_layer(center, quit_y, layer, obj_button_sair);
+	
+	// Fix buttons width
+	retry.image_xscale = 1.25;	
+	quit.image_xscale = 1.25;
+	
+	// Wrap up
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+}
+
 /// @function get_enemy_count(stage)
 /// @description Returns the number of enemies to spawn based on stage number
 /// @param {Real} stage Current stage number
 /// @returns {Real} Number of enemies to spawn
 function get_enemy_count(stage) {
-    // Base count: start with 3 enemies at stage 1
     var base_count = 3;
+    var max_enemies = 25;
     
     // Progressive increase: Add more enemies as stages advance
     // Formula: base + (stage-1) + floor(stage/3)
@@ -30,18 +63,9 @@ function get_enemy_count(stage) {
     // Stage 5: 8 enemies
     // Stage 10: 15 enemies
     var additional = (stage - 1) + floor(stage / 3);
-    
-    // Cap the maximum number of enemies to prevent overwhelming the player
-    var max_enemies = 25;
-    
-    // Calculate final count
     var count = base_count + additional;
-    
-    // Ensure we don't exceed the maximum
+
     return min(count, max_enemies);
-    
-    // Alternative simpler formula if you prefer:
-    // return min(base_count + floor(stage * 1.5), max_enemies);
 }
 
 function next_stage() {
@@ -57,6 +81,7 @@ function next_stage() {
     var view_y = camera_get_view_y(cam);
     var view_w = camera_get_view_width(cam);
     var view_h = camera_get_view_height(cam);
+	var enemy;
     
     // Calculate spawn positions outside the viewport
     for (var i = 0; i < get_enemy_count(STAGE); i++) {
@@ -84,23 +109,16 @@ function next_stage() {
                 break;
         }
         
-		switch (spawn_sprite) {
-			case 0:
-				instance_create_layer(spawn_x, spawn_y, layer, obj_boss);
-				break;
-			case 1:
-			case 2:
-			case 3:
-				instance_create_layer(spawn_x, spawn_y, layer, obj_enemy2);
-				break;
-			case 4:
-			case 5:
-			case 6:
-			case 7:
-			case 8:
-			case 9:
-				instance_create_layer(spawn_x, spawn_y, layer, obj_enemy1);
-				break;
+		if (spawn_sprite >= 4) {
+			enemy = instance_create_layer(spawn_x, spawn_y, layer, obj_enemy1);
+		} else if (spawn_sprite >= 1) {
+			enemy = instance_create_layer(spawn_x, spawn_y, layer, obj_enemy2);
+		} else {
+			enemy = instance_create_layer(spawn_x, spawn_y, layer, obj_boss);
+		}
+		
+		with (enemy) {
+			SPEED = clamp(2, 1 + other.STAGE / 5, 4);
 		}
     }
 }
