@@ -4,12 +4,15 @@ var half_h = abs(sprite_height) / 2;
 x = clamp(half_w, x, room_width - half_w);
 y = clamp(half_h, y, room_height - half_h);
 
+// Handle death
 if (HEALTH <= 0) {
+	var inst;
 	if (COLOR_INDEX <= 0) {
-		layer_sprite_create("Assets", x, y, spr_player1_dead);
+		inst = obj_player1_dead;
 	} else {
-		layer_sprite_create("Assets", x, y, spr_player2_dead);
+		inst = obj_player2_dead;
 	}
+		instance_create_layer(x, y, layer, inst);
 	instance_destroy(self);
 }
 

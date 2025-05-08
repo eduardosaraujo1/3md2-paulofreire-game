@@ -115,7 +115,9 @@ function next_stage() {
 		5 -> obj_enemy_1
 		2 -> obj_enemy_2
 		*/
-		if (spawn_sprite <= 1) {
+		if (STAGE mod 10 == 0) {
+			enemy = instance_create_layer(spawn_x, spawn_y, layer, obj_enemy3);
+		} else if (spawn_sprite <= 1) {
 			enemy = instance_create_layer(spawn_x, spawn_y, layer, obj_boss);
 		} else if (spawn_sprite > 1 && spawn_sprite <= 4) {
 			enemy = instance_create_layer(spawn_x, spawn_y, layer, obj_enemy3);
