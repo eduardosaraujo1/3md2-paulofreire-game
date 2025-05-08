@@ -88,7 +88,7 @@ function next_stage() {
 		var spawn_x = 0
 		var spawn_y = 0;
         var spawn_side = irandom(3); // 0: left, 1: right, 2: top, 3: bottom
-		var spawn_sprite = irandom(9); // 0 is boss, 1-3 is enemy2, 4-10 is enemy1
+		var spawn_sprite = irandom(9) + 1;
         
         switch (spawn_side) {
             case 0: // Left side
@@ -108,13 +108,21 @@ function next_stage() {
                 spawn_y = view_y + view_h + random_range(96, 224);
                 break;
         }
-        
-		if (spawn_sprite >= 4) {
-			enemy = instance_create_layer(spawn_x, spawn_y, layer, obj_enemy1);
-		} else if (spawn_sprite >= 1) {
-			enemy = instance_create_layer(spawn_x, spawn_y, layer, obj_enemy2);
-		} else {
+		
+		/*
+		1 -> obj_boss
+		3 -> obj_enemy_3
+		5 -> obj_enemy_1
+		2 -> obj_enemy_2
+		*/
+		if (spawn_sprite <= 1) {
 			enemy = instance_create_layer(spawn_x, spawn_y, layer, obj_boss);
+		} else if (spawn_sprite > 1 && spawn_sprite <= 4) {
+			enemy = instance_create_layer(spawn_x, spawn_y, layer, obj_enemy3);
+		} else if (spawn_sprite > 4 && spawn_sprite <= 9) {
+			enemy = instance_create_layer(spawn_x, spawn_y, layer, obj_enemy1);
+		} else {
+			enemy = instance_create_layer(spawn_x, spawn_y, layer, obj_enemy2);
 		}
 		
 		with (enemy) {

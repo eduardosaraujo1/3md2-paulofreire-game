@@ -1,9 +1,9 @@
 // === CONFIGURATION
-ATK_COOLDOWN = game_get_speed(gamespeed_fps) * 0.25;
+ATK_COOLDOWN = game_get_speed(gamespeed_fps) * 0.22;
 ATK_SPEED = 4;
 ATK_DAMAGE = 20;
 DASH_DISTANCE = 200;
-DASH_COOLDOWN = game_get_speed(gamespeed_fps) * 0.5;
+DASH_COOLDOWN = game_get_speed(gamespeed_fps) * 0.3;
 DAMAGE = 20;
 SPEED = 8;
 MAX_HEALTH = 200;
